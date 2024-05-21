@@ -76,7 +76,8 @@ export const useDirectusItems = () => {
   const deleteItems = async (data: DirectusItemDeletion): Promise<void> => {
     await directus<void>(`/items/${data.collection}`, {
       method: 'DELETE',
-      body: data.items
+      body: data.items,
+      params: data.params
     })
   }
 

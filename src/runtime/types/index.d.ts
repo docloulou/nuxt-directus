@@ -86,6 +86,7 @@ export interface DirectusItemUpdate {
 export interface DirectusItemDeletion {
   collection: string;
   items: Array<string> | string;
+  params?: DirectusQueryParams;
 }
 
 // User Interfaces

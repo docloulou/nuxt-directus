@@ -5,6 +5,8 @@ import { defineNuxtModule, addPlugin, addImportsDir } from '@nuxt/kit'
 import { joinURL } from 'ufo'
 import { DirectusQueryParams } from './runtime/types'
 
+export type * from './runtime/types'
+
 export interface ModuleOptions {
   /**
    * Directus API URL
@@ -95,7 +97,7 @@ export default defineNuxtModule<ModuleOptions>({
     name: 'nuxt-directus',
     configKey: 'directus',
     compatibility: {
-      nuxt: '^3.0.0-rc.9 || ^2.16.0',
+      nuxt: '>=3.0.0-rc.9 || ^2.16.0',
       bridge: true
     }
   },
